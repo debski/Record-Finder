@@ -1,0 +1,118 @@
+@keyframes logo-ani {
+  from {width: 100%; margin-top: 50px; }
+  to {width: 173px;  margin-top: 20px;}
+}
+
+@keyframes all-other-ani {
+  from {opacity: 0; }
+  to {opacity: 1}
+}
+  
+main.results :not(.logo) {
+  animation-name: all-other-ani;
+  animation-duration: 2s;
+  animation-fill-mode: forwards
+  
+}
+main.results header .logo {
+    text-align: center; 
+    margin: 20px 0 20px 0;
+    animation-name: logo-ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+main.results header {
+  color: white;
+  padding: 20px;
+}
+main.results header textarea {
+outline: none;
+resize: none;
+font-family: 'Raleway', sans-serif;
+font-size: 40px;
+background: transparent;
+border: none;
+color: white;
+}
+
+main.results header .cover {
+  width: 20%;
+}
+main.results header .cover img {
+  width: 100%;
+}
+
+main.results a {
+  font-size: 12p;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  main.results header .cover {
+      width: 50%;
+  }
+}
+
+.result-list {
+  padding: 20px;
+  /* padding-top: 50px; */
+  background: #DFE5DE;
+  color: #161324;
+  width: 100%;
+  height: 100%;
+  
+}
+.result-list h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #161324;
+}
+.result-list ul {
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+.result-list li {
+  padding: 5px;
+}
+.results ul li img {
+  width: 35px;
+}
+
+.results ul li span {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  top: -12px;
+  padding: 2px;
+  font-size: 16px;
+  left: 5px;
+}
+
+.result-list ul li a {
+  text-decoration: none;
+  color: #161324;
+}
+
+.result-list ul li a:hover {
+  text-decoration: underline;
+  color: #42413D;
+}
+
+.result-list button {
+  background-color: #42413D;
+  color: white;
+  width: 140px;
+  border: 2px solid #42413D;
+  height: 50px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+main.results .sign-in-note {
+  font-size: 12p;
+}
