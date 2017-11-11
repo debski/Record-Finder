@@ -2,6 +2,7 @@
   "name": "record-finder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://debski.github.io/Record-Finder/",
   "dependencies": {
     "axios": "^0.17.0",
     "react": "^16.0.0",

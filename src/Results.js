@@ -36,7 +36,7 @@ class Results extends Component {
               'coverImage' : element.images[2].url,
               'albumName' : element.name,
               'artistName' : element.artists[0].name,
-              'albumUrl' : element.external_urls.spotify
+              'albumUrl' : element.uri
             }
           ) 
         }).catch((error) => {
