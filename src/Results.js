@@ -29,6 +29,12 @@ class Results extends Component {
         }
       }).then((result) => {
         
+        if (!result.data.albums.items) {
+          alert('Found no Spotify results. You can change the found text and a new result will be fetched.');
+          this.setState({'spotifyResults':  [] });
+          return;
+        }
+
         var spotiyResults = [];
         result.data.albums.items.forEach((element) => {
           spotiyResults.push(
@@ -42,6 +48,7 @@ class Results extends Component {
         })
         this.setState({'spotifyResults':  spotiyResults });
       }).catch((error) => {
+          alert('Failed calling Spotify');
           console.log(error);
         });
     };
@@ -60,7 +67,7 @@ class Results extends Component {
     
     console.log(this.state.spotifyResults);
 
-    if (!this.state.spotifyResults) {
+    if (!this.props.spotifyToken) {
 
       return (<main className="results">
       <header>

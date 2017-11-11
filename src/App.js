@@ -49,6 +49,12 @@ class App extends Component {
 
         var text = '';
 
+
+        if (!response.data.responses || !response.data.responses[0].textAnnotations) {
+          alert('Couldn\'t find any text in the photo. Please try again!')
+          return;
+        }
+        
         response.data.responses[0].textAnnotations.forEach(function(element) {
           if (!element.locale && parseInt(element.description) != element.description) {
             text += element.description + ' ';
@@ -65,6 +71,7 @@ class App extends Component {
         this.setState({ 'parsedImage' : parsedImage});
       })
       .catch((error) => {
+        alert('Finding text failed. Please try again!')
         console.log(error);
       });
 
