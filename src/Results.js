@@ -39,11 +39,11 @@ class Results extends Component {
               'albumUrl' : element.uri
             }
           ) 
-        }).catch((error) => {
+        })
+        this.setState({'spotifyResults':  spotiyResults });
+      }).catch((error) => {
           console.log(error);
         });
-        this.setState({'spotifyResults':  spotiyResults });
-      });
     };
 
   }
