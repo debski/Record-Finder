@@ -85,9 +85,9 @@ class Results extends Component {
     </main>);
     } else {
 
-      const listItems = this.state.spotifyResults.map((element, index) => {
+      const listItems = this.state.spotifyResults ? this.state.spotifyResults.map((element, index) => {
         return (<li key={'li-' + index}><a href={element.albumUrl}><img src={element.coverImage} alt={element.albumName} /><span><b>{element.albumName}</b> - {element.artistName}</span></a></li>)
-        });
+        }) : null;
 
       return (<main className="results">
       <header>
